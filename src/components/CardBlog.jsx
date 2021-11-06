@@ -31,7 +31,7 @@ const CardBlog = () => {
                 <Card.Body>
                     <Row>
                         <Col lg={3}>
-                            <Card.Img variant="top" alt="frutas" src="https://res.cloudinary.com/dgjrfgl2e/image/upload/v1633049670/Tu%20Tienda%20Cercana/adelgaza_con_susy_n6jgoa.jpg" />
+                            <Card.Img variant="top" alt="dieta" src="https://res.cloudinary.com/dgjrfgl2e/image/upload/v1633049670/Tu%20Tienda%20Cercana/adelgaza_con_susy_n6jgoa.jpg" />
                         </Col>
                         <Col>
                             <Card.Text>

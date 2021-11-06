@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardBlog from './components/CardBlog';
 import CardProductos from './components/CardProductos';
 import CarouselTienda from './components/CarouselTienda';
+import FooterTienda from './components/FooterTienda';
 import NavBarTienda from './components/NavBarTienda';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <CarouselTienda />
       <CardProductos />
       <CardBlog />
+      <FooterTienda />
     </div>
   );
 }
