@@ -10,7 +10,7 @@ function App() {
       <NavBarTienda />
       <CarouselTienda />
       <CardProductos />
-      <CardBlog algo="Blogs" />
+      <CardBlog />
     </div>
   );
 }
