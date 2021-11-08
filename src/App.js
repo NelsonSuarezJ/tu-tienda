@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardBlog from './components/CardBlog';
-import CardProductos from './components/CardProductos';
-import CarouselTienda from './components/CarouselTienda';
-import FooterTienda from './components/FooterTienda';
-import NavBarTienda from './components/NavBarTienda';
+import CardBlog from './components/Cards/CardBlog';
+import CardProductos from './components/Cards/CardProductos';
+import CarouselTienda from './components/Carousel/CarouselTienda';
+import FooterTienda from './components/Footer/FooterTienda';
+import NavBarTienda from './components/Navbar/NavBarTienda';
 
 function App() {
   return (
