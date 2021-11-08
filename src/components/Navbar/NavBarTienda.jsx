@@ -3,7 +3,7 @@ import { Container, Form, FormControl, Nav, Navbar, Button } from 'react-bootstr
 
 const NavBarTienda = () => {
     return (
-        <Navbar style={{ backgroundColor: '#2f7a2c' }} expand="lg" variant="dark" sticky="top">
+        <Navbar bg="success" expand="lg" variant="dark" sticky="top">
             <Container>
                 <Navbar.Brand href="#home">
                     <img src="https://res.cloudinary.com/dgjrfgl2e/image/upload/v1632289106/Tu%20Tienda%20Cercana/logo-TTC-01_saviwg.svg"
