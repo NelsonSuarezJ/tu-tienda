@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Nav, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const FooterTienda = () => {
     return (
@@ -15,10 +16,10 @@ const FooterTienda = () => {
                 <Col className="mt-3" sm={6} lg={3}>
                     <h4>Mapa del sitio</h4>
                     <Nav className="flex-column">
-                        <Nav.Link className="text-white" href="#1">Inicio</Nav.Link>
-                        <Nav.Link className="text-white" href="#2">Productos</Nav.Link>
-                        <Nav.Link className="text-white" href="#3">Tiendas</Nav.Link>
-                        <Nav.Link className="text-white" href="#4">Blog</Nav.Link>
+                        <Link to="/" className="link-light">Inicio</Link>
+                        <Link to="/productos" className="link-light">Productos</Link>
+                        <Link to="/tiendas" className="link-light">Tiendas</Link>
+                        <Link to="/blog" className="link-light">Blog</Link>
                     </Nav>
                 </Col>
                 <Col className="mt-3" sm={6} lg={3}>

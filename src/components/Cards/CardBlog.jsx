@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Card, Button, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const CardBlog = () => {
     return (
@@ -21,7 +22,7 @@ const CardBlog = () => {
                                 que pueden limitar la práctica de buenos hábitos de salud si
                                 no se tiene la información correcta.
                             </Card.Text>
-                            <Button variant="warning" size="">Leer mas...</Button>
+                            <Link to="/blog" className="btn btn-warning">Leer mas...</Link>
                         </Col>
                     </Row>
                 </Card.Body>
@@ -44,7 +45,7 @@ const CardBlog = () => {
                                 aprender a comer mejor y mantener la nueva rutina para
                                 alcanzar el peso deseado.
                             </Card.Text>
-                            <Button variant="warning" size="">Leer mas...</Button>
+                            <Button href="http://adelgazaconsusi.blogspot.com/" variant="warning" target="_blank">Leer mas...</Button>
                         </Col>
                     </Row>
                 </Card.Body>

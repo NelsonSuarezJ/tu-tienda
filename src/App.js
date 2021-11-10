@@ -1,19 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardBlog from './components/Cards/CardBlog';
-import CardProductos from './components/Cards/CardProductos';
-import CarouselTienda from './components/Carousel/CarouselTienda';
-import FooterTienda from './components/Footer/FooterTienda';
+import { BrowserRouter } from 'react-router-dom';
 import NavBarTienda from './components/Navbar/NavBarTienda';
+import AppRouter from './router/AppRouter';
 
 function App() {
   return (
-    <div >
+    <BrowserRouter>
       <NavBarTienda />
-      <CarouselTienda />
-      <CardProductos />
-      <CardBlog />
-      <FooterTienda />
-    </div>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 

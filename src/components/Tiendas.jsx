@@ -1,11 +1,11 @@
 import React from 'react'
 
-const AppRouter = () => {
+const Tiendas = () => {
     return (
         <div>
-
+            <h1>TIENDAS</h1>
         </div>
     )
 }
 
-export default AppRouter
+export default Tiendas
