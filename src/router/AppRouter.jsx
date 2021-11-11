@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Blog from '../components/Blog'
 import Home from '../components/Home'
-import NoFound from '../components/NoFound'
+import NoFound from '../components/NotFound'
 import Productos from '../components/Productos'
 import Tiendas from '../components/Tiendas'
 

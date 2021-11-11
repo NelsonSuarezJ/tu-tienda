@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import CardPagProduct from './Cards/CardPagProduct'
 
 const Productos = () => {
     return (
-        <div>
-            <h1>PRODUCTOS</h1>
-        </div>
+        <Fragment>
+            <CardPagProduct />
+        </Fragment>
     )
 }
 
