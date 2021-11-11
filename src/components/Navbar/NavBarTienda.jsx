@@ -1,5 +1,9 @@
 import React from 'react'
-import { Container, Form, FormControl, Nav, Navbar, Button } from 'react-bootstrap'
+import { Container, Dropdown, Form, FormControl, Button, DropdownButton, Nav, Navbar, Row } from "react-bootstrap";
+import "./NavBarTienda.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
+import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 
 const NavBarTienda = () => {
     return (
@@ -10,7 +14,7 @@ const NavBarTienda = () => {
                         width="200"
                         alt="tu-tienda" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <NavbarToggle sria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">INICIO</Nav.Link>
@@ -21,12 +25,27 @@ const NavBarTienda = () => {
                     <Form className="d-flex">
                         <FormControl
                             type="search"
-                            placeholder="Search"
+                            placeholder="Busca tu producto"
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="warning">Search</Button>
+                        <Button variant="warning">Buscar</Button>
                     </Form>
+                    
+                    <DropdownButton id="dropdown-basic-button" title="Usuario">
+                            <Dropdown.Header id="dropdown-header">
+                                <Row>
+                                    <FontAwesomeIcon icon={faUserCircle} />
+                                </Row>
+                                <Row>
+                                    Usuario
+                                </Row>
+                                <Dropdown.Divider />
+                            </Dropdown.Header>
+                            <Dropdown.Item href="#/action-1">Cerrar Sesion</Dropdown.Item>
+                            {/*  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
+                        </DropdownButton>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
