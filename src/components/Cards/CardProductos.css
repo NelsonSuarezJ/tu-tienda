@@ -1,0 +1,11 @@
+#container .row{
+    width: 200px;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+
+#h1{
+    font-family: 'Poppins';
+    text-align: Center;
+}
