@@ -4,6 +4,7 @@ import CardProductos from './components/Cards/CardProductos';
 import CarouselTienda from './components/Carousel/CarouselTienda';
 import FooterTienda from './components/Footer/FooterTienda';
 import NavBarTienda from './components/Navbar/NavBarTienda';
+import  './App.css';
 
 function App() {
   return (
