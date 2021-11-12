@@ -14,6 +14,7 @@ import "./NavBarTienda.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+import { NavLink } from "react-router-dom";
 
 const NavBarTienda = () => {
   return (
@@ -29,10 +30,10 @@ const NavBarTienda = () => {
         <NavbarToggle sria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">INICIO</Nav.Link>
-            <Nav.Link href="#link1">PRODUCTOS</Nav.Link>
-            <Nav.Link href="#link2">TIENDAS</Nav.Link>
-            <Nav.Link href="#link3">BLOG</Nav.Link>
+            <NavLink to="/" className="nav-link mx-2" >INICIO</NavLink>
+            <NavLink to="/productos" className="nav-link mx-2">PRODUCTOS</NavLink>
+            <NavLink to="/tiendas" className="nav-link mx-2">TIENDAS</NavLink>
+            <NavLink to="/blog" className="nav-link mx-2">BLOG</NavLink>
           </Nav>
           <Form className="d-flex">
             <FormControl
@@ -52,7 +53,7 @@ const NavBarTienda = () => {
               <Row>Usuario</Row>
               <Dropdown.Divider />
             </Dropdown.Header>
-            <Dropdown.Item href="#/action-1">Cerrar Sesion</Dropdown.Item>
+            <Dropdown.Item href="#">Cerrar Sesion</Dropdown.Item>
             {/*  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
           </DropdownButton>
