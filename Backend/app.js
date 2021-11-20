@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var database = require("./config/database");
-var auth = require("./auth/main_auth")
+//var auth = require("./auth/main_auth")
 
 var productosRouter = require('./routes/productos.router');
 var usuariosRouter = require('./routes/usuario.router');
@@ -24,7 +24,7 @@ database.mongoConnect();
 
 app.use('/usuarios', usuariosRouter);
 
-app.use(auth)
+//app.use(auth)
 
 //Router
 app.use('/productos', productosRouter);
