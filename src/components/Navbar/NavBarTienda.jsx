@@ -9,10 +9,11 @@ import {
   Nav,
   Navbar,
   Row,
+  NavDropdown,
 } from "react-bootstrap";
 import "./NavBarTienda.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { NavLink } from "react-router-dom";
 
@@ -31,10 +32,15 @@ const NavBarTienda = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavLink to="/" className="nav-link mx-2" >INICIO</NavLink>
-            <NavLink to="/productos" className="nav-link mx-2">PRODUCTOS</NavLink>
+            <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
+          <NavDropdown.Item  href="#action/3.1">FRUTAS</NavDropdown.Item>
+          <NavDropdown.Item  href="#action/3.2">VERDURAS</NavDropdown.Item>
+          <NavDropdown.Item  href="#action/3.3">CARNES</NavDropdown.Item>
+          </NavDropdown>
             <NavLink to="/tiendas" className="nav-link mx-2">TIENDAS</NavLink>
             <NavLink to="/blog" className="nav-link mx-2">BLOG</NavLink>
           </Nav>
+          
           <Form className="d-flex">
             <FormControl
               type="search"
@@ -45,15 +51,15 @@ const NavBarTienda = () => {
             <Button variant="warning">Buscar</Button>
           </Form>
 
-          <DropdownButton id="dropdown-basic-button" title="Usuario">
+          <DropdownButton align="end" id="dropdown-menu-align-end" title="USUARIO">
             <Dropdown.Header id="dropdown-header">
-              {/* <Row>
-                                    <FontAwesomeIcon icon={faUserCircle} />
-                                </Row> */}
+            <Row>
+                <FontAwesomeIcon icon={faUserCircle} />
+              </Row> 
               <Row>Usuario</Row>
               <Dropdown.Divider />
             </Dropdown.Header>
-            <Dropdown.Item href="#">Cerrar Sesion</Dropdown.Item>
+            <Dropdown.Item id="dropdown-item" href="#">Cerrar Sesion</Dropdown.Item>
             {/*  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
           </DropdownButton>
