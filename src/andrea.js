@@ -1,14 +1,17 @@
 import React from 'react';
 
 
-export default class ProductosNuevos  extends React.Component {
+export default class ProductosNuevos extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {}
     }
-    render() { 
+    render() {
         return (
-            console.log("hola ")
+            <div>
+                console.log("hola ");
+                console.log("Hola mundo");
+            </div>
         );
     }
 }
