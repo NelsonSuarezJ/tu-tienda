@@ -9,7 +9,7 @@ const mongoose = require ("mongoose");
 
 exports.mongoConnect  = () => {
     //const mongoStringConnection = `mongodb://${host}:${port}/${db}`; //comillas simples invertidas alt+96, no funciona con comilla normal
-    const mongoStringConnection = "mongodb+srv://andrepijg:andr3a0415@cluster0.uj3y1.mongodb.net/tutienda"; 
+    const mongoStringConnection = "mongodb+srv://andrepijg:andr3a0415@cluster0.vcxxv.mongodb.net/tutienda?retryWrites=true&w=majority"; 
     mongoose.Promise = global.Promise;
     // variable que me almacene la información de la base de datos
     const dbConnection = mongoose.connection;
