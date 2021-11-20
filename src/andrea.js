@@ -11,6 +11,7 @@ export default class ProductosNuevos extends React.Component {
             <div>
                 console.log("hola ");
                 console.log("Hola mundo");
+                console.log("archivo modificado al tiempo")
             </div>
         );
     }
