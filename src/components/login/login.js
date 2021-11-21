@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import "./login.css";
 import axios from "axios";
-import { APIHOST as host } from "D:\ANDREA\DESARROLLO WEB\Tu-Tienda-Cercana-Grupo\tu-tienda\src\App.json"
+import { APIHOST as host } from "../../App.json"
 // creo el constructor colocando tres CCC
 
 export default class Login extends React.Component {
@@ -31,12 +31,13 @@ export default class Login extends React.Component {
     render() {
         return (
             <Container id="login-container" >
+                {/* <Loading show={this.state.loading} /> */}
                 <Row>
                     <Col>
                         <Row style={{ marginTop: 200 }}>
                             <h2>Iniciar sesión</h2>
                         </Row>
-                        <Row>
+                        <Row style={{ marginTop: 50 }}>
                             <Col
                                 sm="12"
                                 xs="12"
@@ -44,7 +45,7 @@ export default class Login extends React.Component {
                                 lg={{ span: 4, offset: 4 }}
                                 xl={{ span: 4, offset: 4 }}
                             >
-                                <Form>
+                                <Form >
                                     <Form.Group>
                                         <Form.Label>Usuario</Form.Label>
                                         <Form.Control
@@ -66,7 +67,7 @@ export default class Login extends React.Component {
 
                                     <Button
                                         variant="success"
-                                        style = {{marginTop: 20, width:"100%"}}
+                                        style={{ marginTop: 20, width: "100%" }}
                                         onClick={() => {
                                             this.iniciarSesion();
                                         }}
