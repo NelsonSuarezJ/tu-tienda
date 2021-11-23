@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-// import "./CardProductos.css";
+import "./CardProductos.css";
 
 const CardProductos = () => {
   return (
