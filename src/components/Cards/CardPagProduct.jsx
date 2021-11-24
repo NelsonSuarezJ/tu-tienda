@@ -436,6 +436,8 @@ const CardPagProduct = () => {
       <div className="search">
         <input type="text" value={search} onChange={handleSearch} />
       </div>
+      
+
       <div className="container-products">
         {filteredProduct.map((product) => (
           <Card className="container-cards">

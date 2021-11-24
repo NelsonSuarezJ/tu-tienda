@@ -79,13 +79,13 @@ exports.remove = function (req, res){
             if (err){
                 console.error = false,
                     response.exito = false,
-                    response.msg = "Error al eliminar el empleado"
+                    response.msg = "Error al eliminar el "
                 res.json(response)
                 return;
             }
             
             response.exito = true,
-                response.msg = "El empleado se ha eliminado con éxito"
+                response.msg = "El  se ha eliminado con éxito"
             res.json(response)
     
         })

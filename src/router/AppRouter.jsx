@@ -6,6 +6,7 @@ import NoFound from '../components/NotFound'
 import Productos from '../components/Productos'
 import Tiendas from '../components/Tiendas'
 import Login from '../components/login/login'
+import Registro from '../components/Registro/index'
 
 const AppRouter = () => {
     return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
             <Route path="productos" element={<Productos />} />
             <Route path="tiendas" element={<Tiendas />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="registro_productos" element={<Registro />} />
             <Route path="*" element={<NoFound />} />
         </Routes>
     )
