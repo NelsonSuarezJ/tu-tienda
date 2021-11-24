@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Card, Container } from "react-bootstrap";
 // import fruta from "../../assets/mango.png";
-import "./CardProductos.css";
+import "./CardPagProduct.css";
 
 const CardPagProduct = () => {
   const productos = [

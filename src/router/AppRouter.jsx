@@ -9,6 +9,7 @@ import Login from '../components/login/login'
 import Registro from '../components/Registro/index'
 
 const AppRouter = () => {
+
     return (
         <Routes>
             <Route path="/" element={<Home />} />
@@ -22,4 +23,4 @@ const AppRouter = () => {
     )
 }
 
-export default AppRouter
+export default AppRouter;
