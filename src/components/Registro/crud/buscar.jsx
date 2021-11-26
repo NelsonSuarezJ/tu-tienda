@@ -1,11 +1,10 @@
 import React from 'react';
 import { request } from '../../helper/helper';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import DataGrid from '../../grid/grid';
 import ConfirmationPromprs from '../../prompts/confirmation';
 import Loading from '../../loading/loading';
 import MessagePrompt from '../../prompts/message';
-import { set } from 'react-ga';
 
 const columns = [
     {
@@ -13,7 +12,7 @@ const columns = [
         text: 'Product ID',
         hidden: true,
     },
-    
+
     {
         dataField: 'nombre_tienda',
         text: 'Nombre Tienda',
