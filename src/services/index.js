@@ -8,7 +8,7 @@ async function obtenerTiendas() {
             url: baseUrl,
             method: 'GET'
         })
-        return response
+        return response.data
     } catch (error) {
         console.log(error);
     }
