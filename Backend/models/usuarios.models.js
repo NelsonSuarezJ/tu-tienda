@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const UsuariosSchema = new Schema({
+const UsuarioSchema = new Schema({
     usuario: { type: String, required: true, max:100 },
     pass: { type: String, required: true, max:128 },
     
@@ -9,5 +9,5 @@ const UsuariosSchema = new Schema({
 
 //Convertir a Modelo
 
-module.exports = mongoose.model('usuarios', UsuariosSchema);
+module.exports = mongoose.model('usuarios', UsuarioSchema);
 

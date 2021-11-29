@@ -5,11 +5,11 @@ import Loading from '../../loading/loading';
 import MessagePrompt from '../../prompts/message';
 import ConfirmationPromprs from '../../prompts/confirmation';
 
-export default class EmpleadosEditar extends React.Component {
+export default class ProductosEditar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            idEmpleado: this.props.getIdProducto(),
+            idProducto: this.props.getIdProducto(),
             rediret: false,
             message: {
                 text: '',
@@ -28,9 +28,9 @@ export default class EmpleadosEditar extends React.Component {
                 direccion_tienda: '',
                 ciudad: '',
                 nombre_producto: '',
-                tipo_producto:'',
-                precio:'',
-                url_img:'',
+                tipo_producto: '',
+                precio: '',
+                url_img: '',
             },
         };
         this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -70,7 +70,7 @@ export default class EmpleadosEditar extends React.Component {
     guardarProductos() {
         this.setState({ loading: true });
         request
-            .put(`/registro_productos/${this.state.idProducto}`, this.state.producto)
+            .put(`/productos${this.state.idProducto}`, this.state.producto)
             .then((response) => {
                 if (response.data.exito) {
                     this.setState({
@@ -135,7 +135,7 @@ export default class EmpleadosEditar extends React.Component {
                 <Loading show={this.state.loading} />
 
                 <Row>
-                    <h1>Editar Productos</h1>
+                    <h2>Editar Productos</h2>
                 </Row>
                 <Row>
                     <Form>
@@ -178,41 +178,76 @@ export default class EmpleadosEditar extends React.Component {
                                 onChange={(e) => this.setValue('ciudad', e.target.value)}
                             />
                         </Form.Group>
+                        
+                        <Form.Label>Nombre Producto</Form.Label>
+                        <Form.Select className="mb-3" 
+                            controlId="formBasic"
+                            aria-label="Default select example"
+                            value={this.state.producto.nombre_producto}
+                            onChange={(e) => this.setValue('nombre_producto', e.target.value)}>
+                                <option value="0">Seleccione una opción</option>
+                                <option value="1">Ajo</option>
+                                <option value="2">Banano</option>
+                                <option value="3">Coco</option>
+                                <option value="4">Kiwi</option>
+                                <option value="5">Lomo de res</option>
+                                <option value="6">Mango</option>
+                                <option value="7">Manzana Roja</option>
+                                <option value="8">Naranja</option>
+                                <option value="9">Pechuga</option>
+                                <option value="10">Pepino</option>
+                                <option value="11">Piña</option>
+                                <option value="12">Sobrebarriga</option>
+                                <option value="13">Tomate</option>
+                                <option value="13">Zanahoria</option>
+                            </Form.Select>
 
-                        <Form.Group className="mb-3" controlId="formBasic">
-                            <Form.Label>Nombre Producto</Form.Label>
-                            <Form.Control
-                                value={this.state.producto.nombre_producto}
-                                onChange={(e) => this.setValue('nombre_producto', e.target.value)}
-                            />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3" controlId="formBasic">
+                        
                             <Form.Label>Tipo Producto</Form.Label>
-                            <Form.Control
-                                value={this.state.producto.nombre_producto}
-                                onChange={(e) => this.setValue('tipo_producto', e.target.value)}
-                            />
-                        </Form.Group>
+                            <Form.Select className="mb-3" 
+                            controlId="formBasic"
+                            aria-label="Default select example"
+                            value={this.state.producto.tipo_producto}
+                            onChange={(e) => this.setValue('tipo_producto', e.target.value)}>
+                                <option value="1">Seleccione una opción</option>
+                                <option value="1">Frutas</option>
+                                <option value="2">Verduras</option>
+                                <option value="3">Carnes</option>
+                            </Form.Select>
+                            
 
                         <Form.Group className="mb-3" controlId="formBasic">
                             <Form.Label>Precio por Kilo</Form.Label>
                             <Form.Control
                                 value={this.state.producto.precio}
-                                onChange={(e) => this.setValue('precio', e.target.value)}
+                                onChange={(e) => this.setValue('precio_kg', e.target.value)}
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasic">
-                            <Form.Label>Imagen</Form.Label>
-                            <Form.Control
-                                value={this.state.producto.url_img}
-                                onChange={(e) => this.setValue('url_img', e.target.value)}
-                            />
-                        </Form.Group>
+                        <Form.Select className="mb-3" 
+                            controlId="formBasic"
+                            aria-label="Default select example"
+                            value={this.state.producto.url_img}
+                            onChange={(e) => this.setValue('url_img', e.target.value)}>
+                                <option value="0">Seleccione una opción</option>
+                                <option value="1">https://bit.ly/Ajo_</option>
+                                <option value="2">https://bit.ly/Banano_</option>
+                                <option value="3">https://bit.ly/Coco_coco</option>
+                                <option value="4">https://bit.ly/Kiwi_Kiwi</option>
+                                <option value="5">https://bit.ly/Lomo_res</option>
+                                <option value="6">https://bit.ly/Mango_oneco</option>
+                                <option value="7">https://bit.ly/Manzana_Roja</option>
+                                <option value="8">https://bit.ly/Naranja_Naranja</option>
+                                <option value="9">https://bit.ly/Pechuga_</option>
+                                <option value="10">https://bit.ly/Pepino_</option>
+                                <option value="11">https://bit.ly/Piña_</option>
+                                <option value="12">https://bit.ly/Sobrebarriga_</option>
+                                <option value="13">https://bit.ly/Tomate_Tomate</option>
+                                <option value="13">https://bit.ly/Zanahoria_</option>
+                            </Form.Select>
 
                         <Button
-                            variant="primary"
+                            variant="success"
                             onClick={() =>
                                 this.setState({
                                     confirmation: { ...this.state.confirmation, show: true },

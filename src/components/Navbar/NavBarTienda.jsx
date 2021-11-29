@@ -41,16 +41,6 @@ const NavBarTienda = () => {
             <NavLink to="/blog" className="nav-link mx-2">BLOG</NavLink>
           </Nav>
           
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Busca tu producto"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="warning">Buscar</Button>
-          </Form>
-
           <DropdownButton align="end" id="dropdown-menu-align-end" title="USUARIO">
             <Dropdown.Header id="dropdown-header">
             <Row>

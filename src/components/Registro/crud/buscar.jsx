@@ -44,12 +44,13 @@ const columns = [
         text: 'Tipo Producto',
     },
     {
-        dataField: 'precio',
+        dataField: 'precio_kg',
         text: 'Precio por Kilo',
     },
     {
         dataField: 'url_img',
         text: 'Imagen',
+        hidden: true,
     },
 ];
 
@@ -116,7 +117,7 @@ export default class ProductosBuscar extends React.Component {
     eliminarProducto() {
         this.setState({ loading: true });
         request
-            .delete(`/productos/${this.state.idProducto}`)
+            .delete(`/registro_productos/${this.state.idProducto}`)
             .then((response) => {
                 this.setState({
                     loading: false,
@@ -160,7 +161,7 @@ export default class ProductosBuscar extends React.Component {
                 <Loading show={this.state.loading} />
 
                 <Row>
-                    <h1>Buscar empleados</h1>
+                    <h1>Buscar productos</h1>
                 </Row>
                 <Row>
                     <DataGrid

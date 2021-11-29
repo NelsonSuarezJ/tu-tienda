@@ -12,7 +12,7 @@ const cookies = new Cookies();
 
 // creo el constructor colocando tres CCC
 
-export default class login extends React.Component {
+export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,21 +21,25 @@ export default class login extends React.Component {
             pass: '',
         };
     }
+
     iniciarSesion() {
         this.setState({ loading: true });
-        axios.post(`${host}/usuarios/login`, {
+        axios
+        .post(`${host}/usuarios/login`, {
             usuario: this.state.usuario,
             pass: this.state.pass,
         })
 
             .then((response) => {
                 if (isNull(response.data.token)) {
-                    alert('Usiario y/o contraseña invalidos');
+                    alert('Usuario y/o contraseña invalidos');
                 } else {
                     cookies.set('_s', response.data.token, {
                         path: '/',
                         expires: calculaExpiracionSesion(),
-                    }); this.props.history.push('/empleados');
+                    }); 
+                    
+                    this.props.history.push('/registro_productos');
                 }
 
                 this.setState({ loading: false });
@@ -52,10 +56,10 @@ render() {
             <Loading show={this.state.loading}/>
             <Row>
                 <Col>
-                    <Row style={{ marginTop: 200 }}>
+                    <Row>
                         <h2>Iniciar sesión</h2>
                     </Row>
-                    <Row style={{ marginTop: 50 }}>
+                    <Row>
                         <Col
                             sm="12"
                             xs="12"
