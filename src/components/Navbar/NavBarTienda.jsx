@@ -32,15 +32,13 @@ const NavBarTienda = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavLink to="/" className="nav-link mx-2" >INICIO</NavLink>
-            <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
-          <NavDropdown.Item  href="#action/3.1">FRUTAS</NavDropdown.Item>
-          <NavDropdown.Item  href="#action/3.2">VERDURAS</NavDropdown.Item>
-          <NavDropdown.Item  href="#action/3.3">CARNES</NavDropdown.Item>
-          </NavDropdown>
+            <NavLink to="/productos" className="nav-link mx-2" >PRODUCTOS</NavLink>           
             <NavLink to="/tiendas" className="nav-link mx-2">TIENDAS</NavLink>
             <NavLink to="/blog" className="nav-link mx-2">BLOG</NavLink>
           </Nav>
           
+          <Button align="end" id="dropdown-menu-align-end" href="/login" title="LOGIN">LOGIN</Button>
+
           <DropdownButton align="end" id="dropdown-menu-align-end" title="USUARIO">
             <Dropdown.Header id="dropdown-header">
             <Row>
@@ -50,9 +48,7 @@ const NavBarTienda = () => {
               <Dropdown.Divider />
             </Dropdown.Header>
             <Dropdown.Item id="dropdown-item" href="#">Cerrar Sesion</Dropdown.Item>
-            {/*  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>*/}
-          </DropdownButton>
+            </DropdownButton>
         </Navbar.Collapse>
       </Container>
     </Navbar>
